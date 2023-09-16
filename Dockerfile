@@ -9,5 +9,5 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /app
 COPY . .
 RUN composer install
-EXPOSE 82030
+EXPOSE 8203
 CMD ["php", "artisan", "serve"]
