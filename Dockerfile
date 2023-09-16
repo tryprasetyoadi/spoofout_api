@@ -10,4 +10,4 @@ WORKDIR /app
 COPY . .
 RUN composer install
 EXPOSE 8203
-CMD ["php", "artisan", "serve"]
+CMD ["php", "artisan", "serve", "--port=8203"]
