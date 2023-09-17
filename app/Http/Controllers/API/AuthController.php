@@ -54,7 +54,7 @@ class AuthController extends Controller
                 'success' => false,
                 'message' => 'login failed',
                 'data' => 'Check your username and password!'
-            ]);
+            ], 400);
         }
     }
 }
