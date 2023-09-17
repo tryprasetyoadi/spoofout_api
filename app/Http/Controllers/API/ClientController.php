@@ -30,13 +30,14 @@ class ClientController extends Controller
 
         $client = Client::create($validatedData);
 
-        return response()->json(['data' => $client], 201);
+        return response()->json(['data' => $client, 'message' => 'Get Client Successfully'], 201);
     }
 
     // Get details of a specific client
-    public function show(Client $client)
+    public function show( $client)
     {
-        return response()->json(['data' => $client]);
+        $data = Client::find($client);
+        return response()->json(['data' => $data]);
     }
 
     // Update a specific client
