@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
@@ -10,7 +10,7 @@ class ClientController extends Controller
     // Get a list of all clients
     public function index()
     {
-        $clients = Client::all();
+        $clients = Client::paginate();
         return response()->json(['data' => $clients]);
     }
 

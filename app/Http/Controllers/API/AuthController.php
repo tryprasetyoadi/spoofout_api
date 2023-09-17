@@ -53,7 +53,7 @@ class AuthController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'login failed',
-                'data' => []
+                'data' => 'Check your username and password!'
             ]);
         }
     }

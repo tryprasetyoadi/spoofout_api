@@ -3,7 +3,7 @@
 use App\Http\Controllers\API\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ClientController;
+use App\Http\Controllers\API\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +24,5 @@ Route::post('login', [AuthController::class, 'login']);
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('register', [AuthController::class, 'register']);
     Route::post('clients', [ClientController::class, 'store']);
+    Route::get('clients', [ClientController::class, 'index']);
 });
